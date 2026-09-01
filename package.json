@@ -12,5 +12,6 @@
         "postcss": "^8.5.26",
         "tailwindcss": "^4.3.3",
         "vite": "^5.0.0"
-    }
+    },
+    "packageManager": "pnpm@11.25.0"
 }

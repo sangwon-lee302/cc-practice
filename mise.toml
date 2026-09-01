@@ -1,0 +1,5 @@
+[tools]
+node = { version = "26", corepack = false }
+
+[settings]
+idiomatic_version_file_enable_tools = ['pnpm']
