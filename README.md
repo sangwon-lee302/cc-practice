@@ -11,6 +11,10 @@
 
 Claude Code の学習用 Laravel プロジェクト
 
+## 機能一覧
+
+- 日報の CRUD 管理
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
