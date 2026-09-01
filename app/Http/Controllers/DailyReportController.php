@@ -15,6 +15,7 @@ class DailyReportController extends Controller
      */
     public function index(): View
     {
+        $unusedCount = DailyReport::count();
         $dailyReports = DailyReport::latest('date')->paginate(10);
 
         return view('daily-reports.index', compact('dailyReports'));
