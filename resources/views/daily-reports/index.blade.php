@@ -17,11 +17,15 @@
             </thead>
             <tbody class="divide-y divide-gray-200">
                 @forelse ($dailyReports as $dailyReport)
-                    <tr>
+                    <tr class="{{ $loop->odd ? 'bg-white' : 'bg-gray-50' }}">
                         <td class="px-4 py-3 text-sm text-gray-700">{{ $dailyReport->date->format('Y-m-d') }}</td>
                         <td class="px-4 py-3 text-sm text-gray-700">{{ $dailyReport->title }}</td>
                         <td class="px-4 py-3 text-sm text-gray-700">
-                            {{ $dailyReport->status === 'submitted' ? '提出済' : '下書き' }}
+                            @if ($dailyReport->status === 'submitted')
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">提出済</span>
+                            @else
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-200 text-gray-700">下書き</span>
+                            @endif
                         </td>
                         <td class="px-4 py-3 text-sm text-right space-x-2">
                             <a href="{{ route('daily-reports.edit', $dailyReport) }}" class="text-gray-600 hover:text-gray-900">編集</a>
